@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     {{num | toPersianNumber}}
+    {{date | toPersianDate}}
     <button @click="increase">increase </button>
   </div>
 </template>
@@ -10,7 +11,8 @@ export default {
   name: 'app',
   data: function () {
     return {
-      num: 1234
+      num: 1234,
+      date: new Date()
     }
   },
   methods: {
