@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     {{num | toPersianNumber}}
-    {{date | toPersianDate}}
+    <br>
+    {{date | toPersianDate('dddd')}}
+    <br>
     <button @click="increase">increase </button>
   </div>
 </template>
