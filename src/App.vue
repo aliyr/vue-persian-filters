@@ -4,6 +4,8 @@
     <br>
     {{date | toPersianDate('dddd')}}
     <br>
+    {{date | toRelativeDate}}
+    <br>
     <button @click="increase">increase </button>
   </div>
 </template>
