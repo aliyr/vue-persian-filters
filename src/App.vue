@@ -6,7 +6,7 @@
     <br>
     {{date | toRelativeDate}}
     <br>
-    <span>{{num | toPersianCurrency()}}</span>
+    <span>{{num | toPersianCurrency("ریال", 2)}}</span>
     <br>
     <button @click="increase">increase </button>
   </div>

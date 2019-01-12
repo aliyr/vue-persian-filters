@@ -1,11 +1,10 @@
-
 export default function toPersianCurrency (value, symbol, decimals, options) {
   var thousandsSeparator, symbolOnLeft, spaceBetweenAmountAndSymbol
   var digitsRE = /(\d{3})(?=\d)/g
   options = options || {}
   value = parseFloat(value)
   if (!isFinite(value) || (!value && value !== 0)) return ''
-  symbol = symbol != null ? symbol : 'ریال'
+  symbol = symbol != null ? symbol : '$'
   decimals = decimals != null ? decimals : 2
   thousandsSeparator = options.thousandsSeparator != null ? options.thousandsSeparator : ','
   symbolOnLeft = options.symbolOnLeft != null ? options.symbolOnLeft : true
@@ -28,7 +27,7 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
     ? (symbolOnLeft ? symbol + ' ' : ' ' + symbol)
     : symbol
   symbol = symbolOnLeft
-    ? symbol + head +
+    ? ' ' + symbol + ' ' + head +
     _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float
     : head +
     _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float + symbol
