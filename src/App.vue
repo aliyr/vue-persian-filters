@@ -6,6 +6,8 @@
     <br>
     {{date | toRelativeDate}}
     <br>
+    <span>{{num | toPersianCurrency()}}</span>
+    <br>
     <button @click="increase">increase </button>
   </div>
 </template>
@@ -15,7 +17,7 @@ export default {
   name: 'app',
   data: function () {
     return {
-      num: 1234,
+      num: 1234.588,
       date: new Date()
     }
   },
