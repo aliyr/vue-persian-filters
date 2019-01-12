@@ -1,13 +1,14 @@
 export default function toPersianCurrency (value, symbol, decimals, options) {
   var thousandsSeparator, symbolOnLeft, spaceBetweenAmountAndSymbol
   var digitsRE = /(\d{3})(?=\d)/g
+  var sign = value < 0 ? '-' : ''
   options = options || {}
   value = parseFloat(value)
   if (!isFinite(value) || (!value && value !== 0)) return ''
-  symbol = symbol != null ? symbol : 'ریال'
+  symbol = symbol != null ? symbol : sign + ' ' + 'ریال'
   decimals = decimals != null ? decimals : 2
   thousandsSeparator = options.thousandsSeparator != null ? options.thousandsSeparator : ','
-  symbolOnLeft = options.symbolOnLeft != null ? options.symbolOnLeft : true
+  symbolOnLeft = options.symbolOnLeft != null ? options.symbolOnLeft : false
   spaceBetweenAmountAndSymbol = options.spaceBetweenAmountAndSymbol != null ? options.spaceBetweenAmountAndSymbol : false
   var stringified = Math.abs(value).toFixed(decimals)
   stringified = options.decimalSeparator
@@ -27,10 +28,7 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
     ? (symbolOnLeft ? symbol + ' ' : ' ' + symbol)
     : symbol
   symbol = symbolOnLeft
-    ? ' ' + symbol + ' ' + head +
-    _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float
-    : head +
-    _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float + symbol
-  var sign = value < 0 ? '-' : ''
-  return sign + symbol
+    ? symbol + sign + head + _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float
+    : head + _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float + symbol
+  return symbol
 }
