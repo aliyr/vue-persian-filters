@@ -4,7 +4,7 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
   options = options || {}
   value = parseFloat(value)
   if (!isFinite(value) || (!value && value !== 0)) return ''
-  symbol = symbol != null ? symbol : '$'
+  symbol = symbol != null ? symbol : 'ریال'
   decimals = decimals != null ? decimals : 2
   thousandsSeparator = options.thousandsSeparator != null ? options.thousandsSeparator : ','
   symbolOnLeft = options.symbolOnLeft != null ? options.symbolOnLeft : true
