@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "jalali-moment": "^3.2.4",
+    "persianjs": "^0.4.0",
     "vue": "^2.5.21"
   },
   "devDependencies": {

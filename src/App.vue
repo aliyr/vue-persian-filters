@@ -21,7 +21,7 @@ export default {
     return {
       num: -1243234.588,
       date: new Date(1212121111),
-      cur: 'تومان',
+      cur: 'مگابایت',
       words: 'در اداره ی تامین شهربانی جنوب تهران'
     }
   },
