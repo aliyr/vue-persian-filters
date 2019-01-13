@@ -2,11 +2,11 @@
   <div id="app">
     {{num | toPersianNumber}}
     <br>
-    {{date | toPersianDate('dddd')}}
+    <span dir="rtl" >{{date | toPersianDate('dddd')}}</span>
     <br>
-    {{date | toRelativeDate}}
+    <span dir="rtl">{{date | toRelativeDate}}</span>
     <br>
-    <span dir="rtl" >{{num | toPersianCurrency | toPersianNumber }}</span>
+    <span dir="rtl" >{{num | toPersianCurrency(cur , 1) }}</span>
     <br>
     <button @click="increase">increase </button>
   </div>
@@ -17,8 +17,9 @@ export default {
   name: 'app',
   data: function () {
     return {
-      num: 1234.588,
-      date: new Date()
+      num: -1243234.588,
+      date: new Date(1212121111),
+      cur: 'تومان'
     }
   },
   methods: {
