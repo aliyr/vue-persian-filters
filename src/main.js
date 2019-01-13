@@ -4,6 +4,7 @@ import toPersianNumber from './filters/toPersianNumber'
 import toPersianDate from './filters/toPersianDate'
 import toRelativeDate from './filters/toRelativeDate'
 import toPersianCurrency from './filters/toPersianCurrency'
+import toPersianTruncate from './filters/toPersianTruncate'
 
 Vue.config.productionTip = false
 
@@ -13,6 +14,7 @@ let VuePlugin = {
     Vue.filter('toPersianDate', toPersianDate)
     Vue.filter('toRelativeDate', toRelativeDate)
     Vue.filter('toPersianCurrency', toPersianCurrency)
+    Vue.filter('toPersianTruncate', toPersianTruncate)
   }
 }
 Vue.use(VuePlugin)

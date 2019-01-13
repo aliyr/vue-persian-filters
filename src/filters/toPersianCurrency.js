@@ -1,6 +1,6 @@
 import toPersianNumber from './toPersianNumber'
 export default function toPersianCurrency (value, symbol, decimals, options) {
-  let thousandsSeparator, symbolOnLeft, spaceBetweenAmountAndSymbol
+  let separator
   let digitsRE = /(\d{3})(?=\d)/g
   let sign = value < 0 ? '-' : ''
   options = options || {}
@@ -8,9 +8,7 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
   if (!isFinite(value) || (!value && value !== 0)) return ''
   symbol = symbol != null ? sign + ' ' + symbol : sign + ' ' + 'ریال'
   decimals = decimals != null ? decimals : 2
-  thousandsSeparator = options.thousandsSeparator != null ? options.thousandsSeparator : ','
-  symbolOnLeft = options.symbolOnLeft != null ? options.symbolOnLeft : false
-  spaceBetweenAmountAndSymbol = options.spaceBetweenAmountAndSymbol != null ? options.spaceBetweenAmountAndSymbol : false
+  separator = options.separator != null ? options.separator : ','
   let stringified = Math.abs(value).toFixed(decimals)
   stringified = options.decimalSeparator
     ? stringified.replace('.', options.decimalSeparator)
@@ -20,16 +18,11 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
     : stringified
   let i = _int.length % 3
   let head = i > 0
-    ? (_int.slice(0, i) + (_int.length > 3 ? thousandsSeparator : ''))
+    ? (_int.slice(0, i) + (_int.length > 3 ? separator : ''))
     : ''
   let _float = decimals
     ? stringified.slice(-1 - decimals)
     : ''
-  symbol = spaceBetweenAmountAndSymbol
-    ? (symbolOnLeft ? symbol + ' ' : ' ' + symbol)
-    : symbol
-  symbol = symbolOnLeft
-    ? symbol + sign + head + _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float
-    : head + _int.slice(i).replace(digitsRE, '$1' + thousandsSeparator) + _float + symbol
+  symbol = head + _int.slice(i).replace(digitsRE, '$1' + separator) + _float + symbol
   return toPersianNumber(symbol)
 }
