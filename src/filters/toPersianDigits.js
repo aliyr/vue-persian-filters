@@ -43,8 +43,6 @@ function digitToWords (value) {
             _results1.push(numbers.two[three[2]])
           } else if ((i !== 2 || three[1] !== '1') && numbers[i][digit] !== '') {
             _results1.push(numbers[i][digit])
-          } else {
-            continue
           }
         }
 
