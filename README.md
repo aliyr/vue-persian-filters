@@ -95,5 +95,5 @@ Vue.use(vuePersianFilters);
   
 + Example:
     ```js
-    {{num | toPersianDigits(28) }} // در اداره ی شهرداری جنوب تهران =< ‫ در اداره ی شهرداری جنوب ...
+    {{num | toPersianTruncate(28) }} // در اداره ی شهرداری جنوب تهران => ‫ در اداره ی شهرداری جنوب ...
     ```
