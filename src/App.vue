@@ -2,13 +2,15 @@
   <div id="app">
     {{num | toPersianNumber}}
     <br>
-    <span dir="rtl" >{{date | toPersianDate('dddd')}}</span>
+    <span>{{date | toPersianDate('dddd')}}</span>
     <br>
     <span dir="rtl">{{date | toRelativeDate}}</span>
     <br>
     <span dir="rtl">{{num | toPersianCurrency(cur , 1) }}</span>
     <br>
-    <span dir="rtl">{{words | toPersianTruncate(23 , '-')}}</span>
+    <span dir="rtl">{{words | toPersianTruncate(28)}}</span>
+    <br>
+    <span dir="rtl">{{num2 | toPersianDigits}}</span>
     <br>
     <button @click="increase">increase </button>
   </div>
@@ -20,9 +22,10 @@ export default {
   data: function () {
     return {
       num: -1243234.588,
-      date: new Date(1212121111),
-      cur: 'مگابایت',
-      words: 'در اداره ی تامین شهربانی جنوب تهران'
+      date: '3/5/95',
+      cur: 'تومان',
+      words: 'در اداره ی تامین شهربانی جنوب تهران',
+      num2: '1534221'
     }
   },
   methods: {
