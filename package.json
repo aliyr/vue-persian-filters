@@ -74,6 +74,24 @@
     "testMatch": [
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
+    "keywords": [
+      "Filter",
+      "Vue Filter",
+      "Vuejs Filter",
+      "SSR",
+      "Web",
+      "Components",
+      "Vue",
+      "VueJS",
+      "Vue2",
+      "WebComponents",
+      "Popper.js",
+      "Persian",
+      "Persianjs",
+      "Persian Filters",
+      "Vue2 filters",
+      "Vue Persian filters"
+    ],
     "testURL": "http://localhost/"
   }
 }
