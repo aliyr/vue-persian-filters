@@ -43,7 +43,7 @@ Vue.use(vuePersianFilters);
   {{ date | toPersianDate('hh:mm:ss') }} // new Date() => '۰۲:۰۳:۲۲' 
   ```
   
-    #####hint: 
+    *hint*: 
     `toPersianDate` filter uses [moment.js](http://momentjs.com/) date formats, So fill free to Use any of date formats that Moment gives to you 
 
 #### toRelativeDate
@@ -85,7 +85,7 @@ Vue.use(vuePersianFilters);
     ```js
     {{num | toPersianDigits }} // 1534221 => ‫  ‫یک میلیون و پانصد و سی و چهار هزار و دویست و بیست و یک 
     ```
-    ##### Hint: 
+    *Hint*: 
     Decimal and negative numbers not supported by `toPersianDigits` yet, but we try to implement it in newer versions :)
 
 #### toPersianTruncate
