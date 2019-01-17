@@ -64,19 +64,10 @@
       "json",
       "vue"
     ],
-    "keywords": [
-      "Filter",
-      "Vue Filter",
-      "Vuejs Filter",
-      "Web",
-      "Components",
-      "Vue",
-      "VueJS",
-      "VueJS Persian Filters",
-      "VueJS Persian",
-      "Vue2 Persian",
-      "Vue2 Persian Filters"
-    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aliyr/vue-persian-filters.git"
+    },
     "transform": {
       "^.+\\.vue$": "vue-jest",
       ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
@@ -90,6 +81,24 @@
     ],
     "testMatch": [
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "keywords": [
+      "Filter",
+      "Vue Filter",
+      "Vuejs Filter",
+      "SSR",
+      "Web",
+      "Components",
+      "Vue",
+      "VueJS",
+      "Vue2",
+      "WebComponents",
+      "Popper.js",
+      "Persian",
+      "Persianjs",
+      "Persian Filters",
+      "Vue2 filters",
+      "Vue Persian filters"
     ],
     "testURL": "http://localhost/"
   }
