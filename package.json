@@ -1,6 +1,6 @@
 {
   "name": "vue-persian-filters",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "main": "./src/main.js",
   "private": false,
   "scripts": {
@@ -28,6 +28,10 @@
     "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "vue-template-compiler": "^2.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliyr/vue-persian-filters.git"
   },
   "eslintConfig": {
     "root": true,
@@ -59,6 +63,19 @@
       "jsx",
       "json",
       "vue"
+    ],
+    "keywords": [
+      "Filter",
+      "Vue Filter",
+      "Vuejs Filter",
+      "Web",
+      "Components",
+      "Vue",
+      "VueJS",
+      "VueJS Persian Filters",
+      "VueJS Persian",
+      "Vue2 Persian",
+      "Vue2 Persian Filters"
     ],
     "transform": {
       "^.+\\.vue$": "vue-jest",

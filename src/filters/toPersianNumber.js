@@ -12,5 +12,5 @@ export default function toPersianNum (num) {
       res += num.charAt(i)
     }
   }
-  return "‫‫" + res
+  return res
 }
