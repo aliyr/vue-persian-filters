@@ -8,17 +8,17 @@ const myNums = {
   decimal: '-1234.43'
 }
 
-describe.each`
-  val    | expected
-  ${'1234'} | ${'۱۲۳۴'}
-  ${1234} | ${'۱۲۳۴'}
-  ${' 1234 '} | ${' ۱۲۳۴ '}
-  ${' -1234'} | ${' -۱۲۳۴'}
-`('toPersianNumber', ({ val, expected }) => {
-  test(`returns ${expected}`, () => {
-    expect(toPersianNumber(val)).toBe(expected)
-  })
-})
+// describe.each`
+//   val    | expected
+//   ${'1234'} | ${'۱۲۳۴'}
+//   ${1234} | ${'۱۲۳۴'}
+//   ${' 1234 '} | ${' ۱۲۳۴ '}
+//   ${' -1234'} | ${' -۱۲۳۴'}
+// `('toPersianNumber', ({ val, expected }) => {
+//   test(`returns ${expected}`, () => {
+//     expect(toPersianNumber(val)).toBe(expected)
+//   })
+// })
 
 describe('toPersianNumber', () => {
   test('get String as number and parse it to Persian Number', () => {

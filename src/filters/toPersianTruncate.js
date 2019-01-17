@@ -16,5 +16,5 @@ export default function toPersianTruncate (val, length = 10, seperate = '.') {
   } else {
     completedWord = val
   }
-  return "‫‫" + completedWord
+  return '‫‫' + completedWord
 }

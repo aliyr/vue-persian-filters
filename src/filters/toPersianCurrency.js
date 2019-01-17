@@ -23,6 +23,6 @@ export default function toPersianCurrency (value, symbol, decimals, options) {
   let _float = decimals
     ? stringified.slice(-1 - decimals)
     : ''
-  symbol = "‫‫" + head + _int.slice(i).replace(digitsRE, '$1' + separator) + _float + symbol
+  symbol = '‫‫' + head + _int.slice(i).replace(digitsRE, '$1' + separator) + _float + symbol
   return toPersianNumber(symbol)
 }
