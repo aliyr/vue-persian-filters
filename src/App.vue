@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    {{num | toPersianNumber}}
+     {{num | toPersianNumber}}
     <br>
-    <span>{{date | toPersianDate(' Do MMMM YYYY')}}</span>
+    <span> {{date | toPersianDate(' Do MMMM YYYY')}} تاریخ ماست </span>
     <br>
     <span >{{date | toRelativeDate}}</span>
     <br>
-    <span>{{num | toPersianCurrency(cur , 2, {separator: '.', decimalSeparator: ','}) }}</span>
+    <span>در این رقم {{num | toPersianCurrency(cur , 2, {separator: '.', decimalSeparator: ','}) }} بدهی وجود دارد</span>
+    <br>
+    <span>در این رقم ۱۲۴۳۲۳۴.۵۸۸- بدهی وجود دارد</span>
     <br>
     <span>{{words | toPersianTruncate(28)}}</span>
     <br>

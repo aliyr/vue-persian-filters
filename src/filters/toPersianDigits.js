@@ -1,5 +1,5 @@
 export default function toPersianDigits (num) {
-  return "‫‫" + digitToWords(num)
+  return '‫‫' + digitToWords(num)
 }
 
 function digitToWords (value) {
