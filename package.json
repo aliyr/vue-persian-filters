@@ -1,6 +1,6 @@
 {
   "name": "vue-persian-filters",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "main": "./src/main.js",
   "private": false,
   "scripts": {
